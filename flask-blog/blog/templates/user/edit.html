@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<!-- header block -->
+{% block header %}
+<h1>{% block title %}Edit{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+
+<div>
+{{formo.first_name.label}}
+{{formo.first_name}}
+{{formn.first_name.label}}
+{{formn.first_name}}
+
+</div>
+<div>
+{{formo.last_name.label}}
+{{formo.last_name}}
+{{formn.last_name.label}}
+{{formn.last_name}}
+</div>
+<hr>
+<center>{{formn.submit}}</center>
+</form>
+
+{% endblock %}

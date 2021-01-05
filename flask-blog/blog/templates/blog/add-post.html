@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!-- header block -->
+{% block header %}
+<h1>{% block title %}Add Post{% endblock %}</h1>
+{% endblock %}
+
+<!-- content block -->
+{% block content %}
+<form method="POST" action="">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+
+      {{form.title.label}}
+      {{form.title}}
+      
+    </div>
+    <div class="col-md-6 mb-3">
+      {{form.body.label}}
+      {{form.body(size=50)}}
+
+    </div>
+  </div>
+  <hr class="mb-4" />
+  {{form.submit}}
+</form>
+{% endblock %}
